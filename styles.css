@@ -1,8 +1,19 @@
 @import url('https://db.onlinewebfonts.com/c/d002e7c91b889cc10ce21789cfde95dd?family=Sequel+100+Wide+95');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/komika-axis');
 
 body, h2, h3, h4 {
     margin: 0;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+* {
+    font-family: 'jetBrains Mono', sans-serif;
 }
 
 .container {
@@ -10,6 +21,7 @@ body, h2, h3, h4 {
     height: fit-content;
     display: flex;
     flex-direction: column;
+    padding-bottom: 20px;
 }
 
 .introduction {
@@ -21,7 +33,6 @@ body, h2, h3, h4 {
 }
 
 .introduction h1 {
-    font-family: sequel, sans-serif;
     font-size: 40px;
 }
 
@@ -33,7 +44,6 @@ body, h2, h3, h4 {
 .profile-container {
     width: 100%;
     height: fit-content;
-    background-color: aquamarine;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -45,19 +55,58 @@ body, h2, h3, h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .card {
     width: 60%;
     height: fit-content;
     border: 1px solid black;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     display: flex;
+}
+
+.card-content {
+    width: 50%;
+}
+
+.card-button {
+    width: fit-content;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: teal;
 }
 
 .card img {
     max-width: 50%;
     height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .introduction {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .introduction-image {
+        width: 80%;
+        height: auto;
+    }
+
+    .card {
+        padding: 10px;
+        width: calc(90% - 20px);
+        flex-direction: column ;
+    }
+
+    .card-content {
+        width: 100%;
+    }
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+    }
 }
